@@ -355,3 +355,53 @@ cp ~/b6040202998/lap7 ~/b6040200634/
 pwd
 cp /home/b6040202998/lap7 /home/b6040200634
 git --version
+ls
+cd lap7/
+ls
+rm -f -r file file2 filel
+ls
+nano main.c 
+gcc main.c -o syscall
+nano main.c 
+gcc main.c -o syscall
+nano main.c 
+gcc main.c -o syscall
+nano main.c 
+gcc main.c -o syscall
+nano main.c 
+gcc main.c -o syscall
+ls
+./syscall 
+ls
+./syscall 
+cat file.txt 
+ls
+rm -f file.txt file2.txt
+ls
+./syscall 
+nano main.c 
+ls
+gcc main.c -o syscall 
+./syscall 
+nano main.c 
+ls
+gcc main.c -o syscall 
+./syscall 
+ls
+cd
+git init
+echo "# CSLap" >> README.md
+git add README.md
+git commit -m "first commit"
+git config --global user.email "ipskm@outlook.com"
+git config --global user.name "nueng-pskn"
+git commit -m "first commit"
+git remote add origin https://github.com/ipskm/CSLap.git
+git push -u origin master
+git add .
+git commit -m "add file and lap"
+git push
+ำประ
+exit
+docker --version
+git clone https://github.com/edx/devstack
