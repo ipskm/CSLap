@@ -405,3 +405,39 @@ git push
 exit
 docker --version
 git clone https://github.com/edx/devstack
+ls
+mkdir lap8
+cd lap7
+cd ../lap7
+cd ../lap8
+nano exel.c
+nano fork.c
+nano wait.c
+nano waitpid.c
+nano exit.c
+ls
+gcc exel.c -o exel
+gcc fork.c -o fork
+nano fork.c 
+gcc fork.c -o fork
+nano fork.c 
+gcc fork.c -o fork
+nano fork.c 
+gcc fork.c -o fork
+gcc wait.c -o wait
+gcc waitpid.c -o waitpid
+nano waitpid.c 
+gcc waitpid.c -o waitpid
+nano waitpid.c 
+gcc waitpid.c -o waitpid
+ls
+gcc exit.c -o exit.c 
+gcc exit.c -o exit 
+nano exit.c 
+gcc exit.c -o exit 
+ls
+cd 
+ls
+git add .
+git commit -m "add lap8"
+git push
