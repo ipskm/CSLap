@@ -6,8 +6,8 @@
 int main (int argc, char *argv[]){
    pid_t cpid, w;
    int status;
-   cpid == fork();
-   if (cpid == -1 ){
+   cpid = fork();
+   if (cpid == -1){
       perror("fork");
       exit(EXIT_FAILURE);
    }

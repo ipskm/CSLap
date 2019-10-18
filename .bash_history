@@ -441,3 +441,9 @@ ls
 git add .
 git commit -m "add lap8"
 git push
+ls
+git push
+systemctl restart git
+git add .
+git commit -m "add lap8"
+git push
