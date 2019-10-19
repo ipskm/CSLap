@@ -32,7 +32,7 @@ int read_file(){
 //   ssize_t sz = read(fd,content,sizeof(content));
    //lseek(fd,0,SEEK_SET);
    read(fd,content,sizeof(content)); 
-   printf("The content of this file is : %s", &content);
+   printf("The content of this file is : %s", content);
    if(fd == -1){
       printf("Error Number % d\n",errno);
       perror("Program");
@@ -45,37 +45,34 @@ int write_file(){
    char content[200];
    char temp;
    printf("Enter the name of file : ");
-   scanf("%s",&filename);
-   printf("Enter text to be entered in %s file : ",&filename);
-   scanf("%c",&temp);
-   fgets(content,200,stdin);
-   //scanf("%[^\n]", content);
-   printf("%s",content);
-   int fd = open(filename,O_WRONLY,0644);
-   ssize_t wr = write(fd,content,strlen(content));
-   if (fd == -1)printf("Error Number %d\n",errno);
+   scanf("%s", filename);
+   printf("Enter text to be entered in %s file : ", filename);
+   scanf("%c", temp);
+   fgets(content, 200, stdin);
+   printf("%s", content);
+   int fd = open(filename, O_WRONLY, 0644);
+   ssize_t wr = write(fd, content, strlen(content));
+   if (fd == -1)printf("Error Number %d\n", errno);
    close(fd);
 }
 //
 int link_file(){
    char filename[80];
+   char *c;
    printf("Enter name of the file to be link : ");
    scanf("%s", filename);
-   size_t lnk = link(filename, SEEK_SET);
    printf("Enter anme of link file : ");
    scanf("%s", filename);
-   size_t fd = open(filename,O_CREAT, S_IRUSR | S_IWUSR);
-   if(lnk == -1 && fd == -1) 
-      printf("Error Number : %d", errno); 
-   else
-      printf("Link file %s is create\n",filename);
-   close(fd);
+   if((link(filename,c)) == -1){
+      perror("Can't link : ");
+   }
+   printf("File %s is created\n", c);
 }
 //not yet
 int unlink_file(){
    char filename[80];
    printf("Enter filename of directory to unlink : ");
-   scanf("%s",filename);
+   scanf("%s", filename);
    int ulk =  unlink(filename);
    if(ulk == 0){
        printf("Link file %s is deleted", filename);
@@ -87,10 +84,9 @@ int unlink_file(){
 int delete_file(){
    char filename[80];
    printf("Enter name of the file to be delete : ");
-   scanf("%s",filename);
+   scanf("%s", filename);
    int rm = remove(filename);
-   if (rm == 0) printf("file %s is deleted.",filename);
-
+   if (rm == 0) printf("file %s is deleted.", filename);
 }
 //finish
 int copy_file(){
@@ -101,9 +97,9 @@ int copy_file(){
    scanf("%s", filename1);
    printf("Enter the name of file to copy : ");
    scanf("%s", filename2);
-   int fd1 = open(filename1,O_RDONLY);
-   size_t rd = read(fd1,content,sizeof(content));
-   int fd2 = open(filename2, O_CREAT|O_WRONLY,0644);
+   int fd1 = open(filename1, O_RDONLY);
+   size_t rd = read(fd1, content, sizeof(content));
+   int fd2 = open(filename2, O_CREAT|O_WRONLY, 0644);
    size_t wr = write(fd2,content,strlen(content));
    close(fd1);
    close(fd2);

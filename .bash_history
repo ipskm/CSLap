@@ -447,3 +447,74 @@ systemctl restart git
 git add .
 git commit -m "add lap8"
 git push
+ls
+ping 8.8.8.8
+ping google.com
+git push
+ls
+cd lap
+cd lap8
+ls
+./exel
+./fork 
+nano exel.c 
+gcc exel.c -o exelc
+./execl
+./exelc
+nano exel.c 
+./fork 
+nano fork.c 
+gcc fork.c -o fork
+./fork 
+./wait
+nano wait
+nano wait.c 
+./waitpid 
+./waitpid &
+ls
+./waitpid 
+./waitpid &
+nano waitpid
+nano waitpid.c 
+gcc waitpid.c -o waitpid
+ls
+./waitpid &
+./wait
+nano wait.c 
+nano waitpid.c 
+./waitpid 
+nano waitpid.c 
+gcc waitpid.c -o waitpid
+./waitpid
+nano waitpid.c 
+gcc waitpid.c -o waitpid
+./waitpid
+./waitpid &
+kill -STOP 14563
+kill -CONT 14563
+kill -TERM 14563
+ps
+./exit 
+nano exit
+nano exit.c 
+ls
+nano pipe
+nano pipe.c
+gcc pipe.c -o pipe
+./pipe 
+nano pipe.c
+gcc pipe.c -o pipe
+./pipe 
+nano pipe.c
+gcc pipe.c -o pipe
+nano pipe.c
+gcc pipe.c -o pipe
+./pipe 
+nano pipe.c
+gcc pipe.c -o pipe
+./pipe 
+cd
+git add .
+git commit -m "complete lap 8"
+git push
+exit
