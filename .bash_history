@@ -518,3 +518,22 @@ git add .
 git commit -m "complete lap 8"
 git push
 exit
+ls
+cd lap8
+cd ../lap7
+ls
+nano main.c 
+gcc main.c -o syscall 
+nano main.c 
+gcc main.c -o syscall 
+nano main.c 
+gcc main.c -o syscall 
+nano main.c 
+gcc main.c -o syscall 
+nano main.c 
+gcc main.c -o syscall 
+cd 
+git add .
+git commit -m "fix code lap 7"
+git push
+exit
